@@ -64,6 +64,7 @@ h3 {
   border-bottom: 2px solid #cccccc;
 }
 
+/* This is that logo thing on the left */
 #logo {
   float: left;
   width: 250px;
@@ -78,6 +79,7 @@ h3 {
   background: #4aaaa5;
 }
 
+/* these next few groups are the links on the side */
 nav {
   float: right;
   margin-top: 25px;
@@ -219,15 +221,64 @@ input[type=submit] {
 
 /* Added code */
 @media only screen and (max-width: 980px) {
-
+  /* this will float the main body to the left as per the picture */
+ #main-container{
+  float: left;
+  margin-left: 30px;
+  width: 70%; /*just eyeballing the picure it looks like it's taking up 70% of the page */
+ }
+ nav {
+   margin-right: 30px;
+ }
+ #logo {
+   margin-left: 30px;
+ }
 }
 
 @media only screen and (max-width: 768px) {
+   #main-container{
+    float: left;
+    margin-left: 20px;
+    width: 95%;
+   }
+   nav {
+     margin-right: 20px;
+   }
+   #logo {
+     margin-left: 20px;
+   }
 
 }
 
 @media only screen and (max-width: 640px) {
+  nav {
+    float: left;
+    margin-top: 0;
+    margin-left: 25%;
+    /* this margin above isn't ideal but it's the closest thing I can get to centering it while using floats */
+  }
+  
+  nav a {
+    display: inline-block;
+    padding-left: 15px;
+    margin-left: 15px;
+    line-height: 18px;
+    color: #999;
+    text-decoration: none;
+    border-left: 1px solid #efefef;
+  }
+  
+  nav a:first-child {
+    border-left: 0 none;
+  }
+  
+  #logo {
+    width: 100%;
+    margin: 0;
+  }
+
+  .main-section {
+    margin-top: 30px;
+  }
 
 }
-
-/* I'm really confused by the directions, don't understand what's special about line 6, or what 7 , or 8 want me to do. */
